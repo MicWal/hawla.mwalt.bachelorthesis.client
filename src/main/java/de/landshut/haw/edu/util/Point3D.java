@@ -1,7 +1,14 @@
 package de.landshut.haw.edu.util;
 
-public class Point3D {
+import java.io.Serializable;
+
+public class Point3D implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6123061003707969117L;
+
 	private double x;
 	
 	private double y;
@@ -45,6 +52,12 @@ public class Point3D {
 	
 	public void setZ(double z) {
 		this.z = z;
+	}
+
+
+	@Override
+	public String toString() {
+		return "X: " + x + " Y: " + y + " Z: " + z;
 	}
 	
 }

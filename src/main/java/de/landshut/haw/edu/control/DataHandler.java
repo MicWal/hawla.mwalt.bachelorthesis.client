@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 
-import de.landshut.haw.edu.model.TransmissionObject;
 import de.landshut.haw.edu.puffer.PufferHolder;
 import de.landshut.haw.edu.util.Constants;
 import de.landshut.haw.edu.util.ErrorCodes;
+import de.landshut.haw.edu.util.TransmissionObject;
 
 public class DataHandler {
 
@@ -15,7 +15,6 @@ public class DataHandler {
 	
 	private boolean endTransmission;
 
-	private int count;
 	
 	public DataHandler(Socket server) {
 		super();
@@ -23,9 +22,7 @@ public class DataHandler {
 		this.server = server;
 		
 		endTransmission = false;
-		
-		count = 0;
-		
+				
 		communicateWithServer();
 	}
 
@@ -66,19 +63,14 @@ public class DataHandler {
 				
 				transObj = (TransmissionObject) inObj.readObject();
 				
-//				System.out.println("get object " + transObj.getTransmission_status() );
-				
 				PufferHolder.INPUT_PUFFER.put(new TransmissionObject(transObj));
-				
-				count++;
-				if(count == 6000) {
-					System.out.println("Puffer size: " + PufferHolder.INPUT_PUFFER.size());
-					count=0;
-				}
-				
+								
 				if(transObj.getTransmission_status().equals(Constants.END_TRANSMISSION)) {
 					endTransmission = true;
 				}
+				
+				transObj.unreferenceArrayList();
+				transObj = null;
 				
 			} catch (ClassNotFoundException e) {
 				System.err.println("Class of a serialized object cannot be found");
@@ -90,6 +82,7 @@ public class DataHandler {
 				
 			} catch (InterruptedException e) {
 				System.err.println("Interrupt while waiting to add item to puffer. Continue but object is lost.");
+				System.exit(ErrorCodes.SLEEP_INTERUPT);
 			}	
 		}
 	}

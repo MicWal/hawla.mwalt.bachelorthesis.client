@@ -2,8 +2,8 @@ package de.landshut.haw.edu.control.datahandling;
 
 
 import de.landshut.haw.edu.control.algorithm.Algorithm;
-import de.landshut.haw.edu.model.TransmissionObject;
 import de.landshut.haw.edu.puffer.PufferHolder;
+import de.landshut.haw.edu.util.TransmissionObject;
 
 public abstract class DataUpdater extends Thread implements DataUpdaterInterface {
 

@@ -1,9 +1,16 @@
 package de.landshut.haw.edu.model;
 
+import java.io.Serializable;
+
 import de.landshut.haw.edu.util.Point3D;
 
-public class Sensor {
+public class Sensor implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1728469664516017900L;
+
 	private int id;
 	
 	private Point3D coordinates;
@@ -129,5 +136,24 @@ public class Sensor {
 		accelerationVector.setY(y);
 		accelerationVector.setZ(z);
 	}
+	
+	
+	public Point3D getAccelerationInMeterPerSecondsPow(){
+		double x = acceleration * Math.pow(10, -10) * accelerationVector.getX();
+		double y = acceleration * Math.pow(10, -10) * accelerationVector.getY();
+		double z = acceleration * Math.pow(10, -10) * accelerationVector.getZ();
+		
+		return new Point3D(x, y, z);
+	}
+	
+	
+	public Point3D getVelocityInMeterPerSeconds(){
+		double x = velocity * Math.pow(10, -10) * velocityVector.getX();
+		double y = velocity * Math.pow(10, -10) * velocityVector.getY();
+		double z = velocity * Math.pow(10, -10) * velocityVector.getZ();
+		
+		return new Point3D(x, y, z);
+	}
+	
 
 }

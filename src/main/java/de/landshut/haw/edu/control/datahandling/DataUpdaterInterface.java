@@ -1,7 +1,7 @@
 package de.landshut.haw.edu.control.datahandling;
 
-import de.landshut.haw.edu.model.TransmissionObject;
 import de.landshut.haw.edu.model.environment.Environment;
+import de.landshut.haw.edu.util.TransmissionObject;
 
 public interface  DataUpdaterInterface {
 

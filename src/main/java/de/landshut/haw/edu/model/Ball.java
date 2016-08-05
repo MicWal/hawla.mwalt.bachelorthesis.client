@@ -1,7 +1,14 @@
 package de.landshut.haw.edu.model;
 
-public class Ball {
+import java.io.Serializable;
+
+public class Ball implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2265566560955144999L;
+
 	private Sensor ball;
 
 	private boolean onField;

@@ -2,9 +2,7 @@ package de.landshut.haw.edu.util;
 
 import static org.junit.Assert.*;
 
-import java.util.HashMap;
 
-import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Test;
 
@@ -25,7 +23,6 @@ public class ConvertUtilTest {
 	
 	@Test
 	public void testStringToJSONObject() {
-		String test = "{\"test\": 2}";
 				
 		assertEquals("null should return null", null, ConvertUtil.stringToJSONObject(null));
 

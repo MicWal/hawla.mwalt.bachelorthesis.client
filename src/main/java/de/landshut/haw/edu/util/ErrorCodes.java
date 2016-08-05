@@ -6,6 +6,8 @@ package de.landshut.haw.edu.util;
  */
 public final class ErrorCodes {
 	
+	private ErrorCodes() {}
+	
 	public final static int CONNECTION_START_ERR = 1;
 	
 	public final static int STREAM_ERR = 2;

@@ -1,9 +1,16 @@
 package de.landshut.haw.edu.model.soccer;
 
+import java.io.Serializable;
+
 import de.landshut.haw.edu.util.Constants;
 
-public class GoalGate {
+public class GoalGate implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8015861964692024168L;
+
 	// length in cm
 	private final double goalLength;
 	

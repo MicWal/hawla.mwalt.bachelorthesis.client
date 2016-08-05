@@ -1,6 +1,13 @@
 package de.landshut.haw.edu.model;
 
-public class Participant{
+import java.io.Serializable;
+
+public class Participant implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4388208287017575965L;
 
 	private String name;
 
@@ -58,6 +65,20 @@ public class Participant{
 
 	public void setIsActive(boolean isActive) {
 		this.isActive = isActive;
+	}
+	
+	public boolean compare(Participant p) {
+	
+		if(name.equals(p.getName())) {
+			
+			if(this.leftLeg.getId() == p.getLeftLeg().getId()) {
+				
+				if(this.rightLeg.getId() ==  p.getRightLeg().getId()) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 }

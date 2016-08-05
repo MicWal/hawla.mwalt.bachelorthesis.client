@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import de.landshut.haw.edu.model.Sensor;
-import de.landshut.haw.edu.model.TransmissionObject;
 import de.landshut.haw.edu.model.environment.Environment;
 import de.landshut.haw.edu.model.environment.SoccerEnvironment;
 import de.landshut.haw.edu.util.Constants;
 import de.landshut.haw.edu.util.ConvertUtil;
+import de.landshut.haw.edu.util.TransmissionObject;
 
 public class SoccerDataUpdater extends DataUpdater{
 	
@@ -91,7 +91,7 @@ public class SoccerDataUpdater extends DataUpdater{
 		        
 		    case Constants.ACTIVE_TRANSMISSION: 
 		    	
-//		    	update(transObj.getContent());
+		    	update(transObj.getContent());
 		    	
 		        break;
 		        
@@ -246,7 +246,7 @@ public class SoccerDataUpdater extends DataUpdater{
 		
 		idSensorMap = environment.getIdSensorMap();
 		
-		algorithm.setIdSensorMap(idSensorMap);
+//		algorithm.setIdSensorMap(idSensorMap);
 		
 		countSensors = idSensorMap.size();
 		

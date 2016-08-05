@@ -17,8 +17,13 @@ import de.landshut.haw.edu.util.Constants;
 import de.landshut.haw.edu.util.Point3D;
 import de.landshut.haw.edu.util.ConvertUtil;
 
-public class SoccerEnvironment extends Environment{
+public class SoccerEnvironment extends Environment {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9139548785914406273L;
+
 	private SoccerField playfield;
 	
 	private ArrayList<Ball> balls;
@@ -112,7 +117,7 @@ public class SoccerEnvironment extends Environment{
 		
 		ArrayList<Participant> memberList = new ArrayList<Participant>();
 		
-		String name = (String) (team.get(Constants.KEYWORD_NAME));
+		String name = (String) (team.get(Constants.KEYWORD_TEAMNAME));
 		
 		JSONArray members = (JSONArray) (team.get(Constants.KEYWORD_MEMBERS));
 		
@@ -159,7 +164,7 @@ public class SoccerEnvironment extends Environment{
 		Participant[] teamArr = new Participant[memberList.size()];
 		
 		teamArr = memberList.toArray(teamArr);
-		
+
 		return new Team(name, teamArr);
 	}
 	

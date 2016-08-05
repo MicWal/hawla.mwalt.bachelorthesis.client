@@ -42,22 +42,26 @@ public class ClientMain {
 			dataUpdater.setAlgorithm(algorithm);
 			
 			algorithm.setEnvironment(environment);
-			System.out.println("algo set environment");
+			
 			
 			// establish connection to server
 		  	ConnectionHandler conHandler = new ConnectionHandler(args[0], Integer.parseInt(args[1]));
 
+		  	
 		  	// create data handling
-			@SuppressWarnings("unused")
 			DataHandler dHandler = new DataHandler(conHandler.getSocket());	
+			
 			
 			// close connection after transmission
 			conHandler.closeConnection();
 			
+			
 			CONSOLE_IN.close();
 		}
 		else {
+			
 			System.out.println("Port is invalid. Restart client with valid argument");
+			
 		}
 	}
 }

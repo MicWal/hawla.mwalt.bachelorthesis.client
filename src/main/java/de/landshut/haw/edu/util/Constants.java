@@ -2,6 +2,8 @@ package de.landshut.haw.edu.util;
 
 public class Constants {
 	
+	private Constants()  {}
+		
 	/*
 	 * 				Main area
 	 */
@@ -113,7 +115,9 @@ public class Constants {
 	 *				Transmisison object ID 
 	 */
 	
-	public static final long SERIAL_VERSION_UID = -820413593466554404L;
+	public final static long TRANSMISSION_VERSION_UID = -820413593466554404L;
+	
+	public static final long RESULTLINE_VERSION_UID = -820413593466551000L;
 
 	public static final String DELIMETER = " ";
 
@@ -123,20 +127,67 @@ public class Constants {
 
 	/*
 	 * 				Algorithm area
-	 */
-	public final static int NO_BALL_ON_FIELD = 0;
+	 */	
 	
-	public final static int ONE_BALL_ON_FIELD = 1;
+	public static final int TOLERANCE_PLAYER = 2;
 	
-	public final static int MORE_THEN_ONE_BALL_ON_FIELD = 2;
+	public static final double THROW_IN_MINIMUM_HEIGHT = 1000; // in millimeter
 
-	public static final double TOLERANCE_RADIUS = 2500;
+	public static final double RADIUS_TOLERANCE = 500; // in millimeter
 	
-	public static final double BALL_IDLE = 500000; //in mikrometer/s 
+	public static final double RADIUS_TOLERANCE_KICKOFF = 2500;
 	
-	/**
-	 * Tolerance of amount of player who don't have to be on the same side.
-	 */
-	public static final int TOLERANCE_PLAYER = 2; 
+	public static final double RADIUS_TOLERANCE_BALL_MOVED = 500; // in millimeter
 	
+	public static final double RADIUS_CORNER = 2500; // in millimeter
+
+	public static final double RADIUS_THROW_IN = 500; // in millimeter
+	
+	public static final double RADIUS_GOALKICK = 3000; // in millimeter
+	
+	public static final double TOLERANCE_Y_THROWIN = 100; // in mm 
+	
+	public static final double TOLERANCE_BALL_EXIT = 100; // in mm
+	
+	public static final double GOAL_AREA = 14000; // in millimeter
+	
+	public static final double CORNER_AREA = 1200; // in millimeter 
+
+	public static final double BALL_IDLE = 1; // in m/s 
+	
+	public static final double BALL_SLOW = 2; // in m/s 
+	
+	public static final double CORNER_BALL_ACCELERATION = 35.0; // in m/s²
+	
+	public static final double CORNER_LOW_ACCELERATION = 10.0; // in m/s²
+	
+	public static final double KICKOFF_BALL_ACCELERATION = 40.0; // in m/s²
+	
+	public static final double KICKOFF_LOW_ACCELERATION = 5.0; // in m/s²
+	
+	public static final double THROWIN_LOW_ACCELERATION = 10.0; // in m/s²
+	
+	public static final double THROWIN_BALL_ACCELERATION = 30; // in m/s²
+	
+	public static final String FIELD_EXIT_LEFT = "LEFT";
+	
+	public static final String FIELD_EXIT_RIGHT = "RIGHT";
+	
+	public static final String FIELD_EXIT_TOP = "TOP";
+	
+	public static final String FIELD_EXIT_BOTTOM = "BOTTOM";
+
+	public static final int MAX_PUFFER = 50000;
+	
+	public static final int REMOVE_PUFFER = 5000;
+
+	public static final double KICK_ACCELERATION = 0;
+
+
+
+
+
+
+
+
 }

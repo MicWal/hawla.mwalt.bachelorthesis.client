@@ -1,9 +1,16 @@
 package de.landshut.haw.edu.model;
 
+import java.io.Serializable;
+
 import de.landshut.haw.edu.util.Point3D;
 
-public class Field {
+public class Field implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7223165006018470106L;
+
 	protected final Point3D leftBottom;
 	
 	protected final Point3D leftTop;

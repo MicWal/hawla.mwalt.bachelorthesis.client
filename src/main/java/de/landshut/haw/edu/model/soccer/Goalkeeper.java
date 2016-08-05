@@ -6,6 +6,11 @@ import de.landshut.haw.edu.model.Sensor;
 public class Goalkeeper extends Participant{
 	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7593307581254091898L;
+
 	private Sensor idLeftArm;
 	
 	private Sensor idRightArm;

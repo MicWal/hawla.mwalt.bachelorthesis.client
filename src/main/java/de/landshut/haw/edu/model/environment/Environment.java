@@ -1,5 +1,6 @@
 package de.landshut.haw.edu.model.environment;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import de.landshut.haw.edu.model.Ball;
@@ -7,8 +8,13 @@ import de.landshut.haw.edu.model.Field;
 import de.landshut.haw.edu.model.Participant;
 import de.landshut.haw.edu.model.Team;
 
-public abstract class Environment {
+public abstract class Environment implements Serializable {
 
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3994597867183033723L;
 	
 	/**
 	 * isUpdated represent state of environment.<br>
