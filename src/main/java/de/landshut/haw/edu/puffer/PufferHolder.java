@@ -1,6 +1,7 @@
 package de.landshut.haw.edu.puffer;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -22,7 +23,7 @@ public class PufferHolder {
 	 * Add element to hold puffer. If puffer reached max puffer value it deletes a specified portion of the list.
 	 * @param environment Element to add
 	 */
-	public static void addElementHoldPuffer(Environment environment) {
+	public static synchronized void addElementHoldPuffer(Environment environment) {
 
 			if(HOLD_PUFFER.size() > Constants.MAX_PUFFER) {
 				
@@ -33,6 +34,19 @@ public class PufferHolder {
 			HOLD_PUFFER.add(environment);
 		
 	}
+	
+	
+	
+	/**
+	 * Clear the environment puffer.
+	 * @param environment
+	 */
+	public static synchronized void clearHoldPuffer() {
+
+			HOLD_PUFFER.clear();
+	}
+	
+	
 	
 	
 	

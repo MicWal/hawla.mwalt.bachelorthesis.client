@@ -57,6 +57,8 @@ public class Event {
 	public static final String CORNER = "Corner";
 	
 	public static final String THROW_IN = "Throw in";
+	
+	public static final String UNDEFINED_KICKOFF = "Undefined_kickoff";
 
 
 

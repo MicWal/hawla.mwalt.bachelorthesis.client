@@ -164,7 +164,9 @@ public class Constants {
 	
 	public static final double CORNER_LOW_ACCELERATION = 10.0; // in m/s²
 	
-	public static final double KICKOFF_BALL_ACCELERATION = 40.0; // in m/s²
+	public static final double KICKOFF_BALL_IDLE = 1; // in m/s 
+	
+	public static final double KICKOFF_BALL_ACCELERATION = 60.0; // in m/s²
 	
 	public static final double KICKOFF_LOW_ACCELERATION = 5.0; // in m/s²
 	

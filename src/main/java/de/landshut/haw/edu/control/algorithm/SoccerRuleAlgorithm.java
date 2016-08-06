@@ -13,7 +13,7 @@ public class SoccerRuleAlgorithm extends Algorithm {
 	 */
 	private SoccerEnvironment environment;
 	
-	private RuleV2 rules3;
+	private RuleV2 rules;
 	
 
 
@@ -21,7 +21,7 @@ public class SoccerRuleAlgorithm extends Algorithm {
 		
 		endTransmission = false;
 		
-		rules3 = new RuleV2();
+		rules = new RuleV2();
 	}
 		
 	
@@ -31,9 +31,9 @@ public class SoccerRuleAlgorithm extends Algorithm {
 		environment.analyze();
 		
 		// check environment for new event	
-		rules3.checkAgainstRules(environment);
+		rules.checkAgainstRules(environment);
 		
-//		addSnapshotToHoldPuffer();
+		addSnapshotToHoldPuffer();
 		
 		environment.isAnalyzed();
 		
@@ -46,12 +46,8 @@ public class SoccerRuleAlgorithm extends Algorithm {
 		while(!endTransmission) {
 			processData();
 		}
-		
-//		rules.writeEventListToFile();
-		
-//		rules2.writeEventListToFile();
-		
-		rules3.writeEventListToFile();
+			
+		rules.writeEventListToFile();
 		
 	}
 

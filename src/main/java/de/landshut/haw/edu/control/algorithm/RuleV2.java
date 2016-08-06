@@ -40,7 +40,7 @@ public class RuleV2 {
 	
 	private boolean gameStarted, secondHalfStarted;
 	
-	private long startTimestamp, goal_line_Timestamp;
+	private long startTimestamp, goal_line_Timestamp, lookup_Timestamp;
 	
 	private String goal_line, corner_line, side_line;
 	
@@ -60,7 +60,7 @@ public class RuleV2 {
 		
 		gameStarted = secondHalfStarted = false;
 				
-		startTimestamp = goal_line_Timestamp = 0L;
+		startTimestamp = goal_line_Timestamp = lookup_Timestamp = 0L;
 		
 		goal_line = corner_line = side_line = "";
 		
@@ -88,19 +88,19 @@ public class RuleV2 {
 				
 				checkExecutedKickOff();
 								
-//				//check top corner
-//				checkPossibleCornerKick(environment.getPlayfield().getLeftTop(), 
-//											environment.getPlayfield().getRightTop(), topHalf, bottomHalf, Event.POSSIBLE_CORNER_TOP);
-//				
-//				checkExecutedCornerKick(environment.getPlayfield().getLeftTop(), 
-//						environment.getPlayfield().getRightTop(), topHalf, bottomHalf, Event.POSSIBLE_CORNER_TOP, Event.EXECUTE_CORNER_TOP);
-//
-//				//check bottom corner
-//				checkPossibleCornerKick(environment.getPlayfield().getLeftBottom(), 
-//											environment.getPlayfield().getRightBottom(), bottomHalf, topHalf, Event.POSSIBLE_CORNER_BOTTOM);
-//				
-//				checkExecutedCornerKick(environment.getPlayfield().getLeftBottom(), 
-//						environment.getPlayfield().getRightBottom(), bottomHalf, topHalf, Event.POSSIBLE_CORNER_BOTTOM, Event.EXECUTE_CORNER_BOTTOM);				
+				//check top corner
+				checkPossibleCornerKick(environment.getPlayfield().getLeftTop(), 
+											environment.getPlayfield().getRightTop(), topHalf, bottomHalf, Event.POSSIBLE_CORNER_TOP);
+				
+				checkExecutedCornerKick(environment.getPlayfield().getLeftTop(), 
+						environment.getPlayfield().getRightTop(), topHalf, bottomHalf, Event.POSSIBLE_CORNER_TOP, Event.EXECUTE_CORNER_TOP);
+
+				//check bottom corner
+				checkPossibleCornerKick(environment.getPlayfield().getLeftBottom(), 
+											environment.getPlayfield().getRightBottom(), bottomHalf, topHalf, Event.POSSIBLE_CORNER_BOTTOM);
+				
+				checkExecutedCornerKick(environment.getPlayfield().getLeftBottom(), 
+						environment.getPlayfield().getRightBottom(), bottomHalf, topHalf, Event.POSSIBLE_CORNER_BOTTOM, Event.EXECUTE_CORNER_BOTTOM);				
 				
 				checkBallGoalLineExit();
 				
@@ -186,7 +186,7 @@ public class RuleV2 {
 		Ball activeBall = activeBalls.get(0);
 		
 		// check if any ball is in center point/area
-		if(velocityCheck(activeBall, Constants.BALL_IDLE, false) && accelerationCheck(activeBall, Constants.KICKOFF_LOW_ACCELERATION, false)) { // 1.
+		if(velocityCheck(activeBall, Constants.KICKOFF_BALL_IDLE, false) && accelerationCheck(activeBall, Constants.KICKOFF_LOW_ACCELERATION, false)) { // 1.
 			
 			// check if ball is in center area
 			boolean ret = PointMethods.pointInsideCirle(centerPoint, Constants.RADIUS_TOLERANCE_KICKOFF, activeBall.getBall().getCoordinates());
@@ -262,6 +262,8 @@ public class RuleV2 {
 							goal_line = "";
 
 							goal_line_Timestamp = 0;
+							
+							PufferHolder.clearHoldPuffer();
 
 							
 						} // add goal 
@@ -271,16 +273,50 @@ public class RuleV2 {
 								
 								addEvent(bottomHalf.getName() + " " + Event.GOAL , goal_line_Timestamp, null);
 								
+								PufferHolder.clearHoldPuffer();
+								
 							} else if(goal_line.equals(Event.BALL_EXIT_BOTTOM_GOAL)) {
 								
 								addEvent(topHalf.getName() + " " + Event.GOAL , goal_line_Timestamp, null);
+								
+								PufferHolder.clearHoldPuffer();
 
+							} else {
+								
+								lookup_Timestamp = lookupBallExit();
+								
+								if(lookup_Timestamp == 0) {
+									
+									// there are cases in which the same kickoff is diagnosed twice, so it can't find a ball near goal line because the ball lies only in the center area
+									// in this case don't throw event
+									if(!checkLastEvent(bottomHalf.getName() + " " + Event.GOAL , 2) && !checkLastEvent(topHalf.getName() + " " + Event.GOAL , 2)) {
+										
+										addEvent(Event.UNDEFINED_KICKOFF, environment.getTimestamp(), null);
+										
+									}
+									
+								} else if (lookup_Timestamp > 0) {
+									
+									addEvent(bottomHalf.getName() + " " + Event.GOAL , -lookup_Timestamp, null);
+									
+									PufferHolder.clearHoldPuffer();
+									
+								} else {
+									
+									addEvent(topHalf.getName() + " " + Event.GOAL , lookup_Timestamp, null);
+									
+									PufferHolder.clearHoldPuffer();
+									
+								}
+								
 							}
 							
 							// reset values
 							goal_line_Timestamp = 0;
 							
 							goal_line = "";
+							
+							
 							
 						} 
 					}
@@ -430,10 +466,10 @@ public class RuleV2 {
 	
 	/**
 	 * Look in stored environments if there is a ball near goal line.
-	 * @return
+	 * @return 0 no match else timestamp; positive sign = top line and negative sign = bottom line
 	 */
 	private long lookupBallExit() {
-	
+		
 		long timestamp = 0;
 		
 		int position = PufferHolder.getHoldPufferSize() - 1;
@@ -693,14 +729,16 @@ public class RuleV2 {
 	private long possibleBallGoalLineExit(double tolerance, SoccerEnvironment environment) {
 		
 		long timestamp = 0;
-				
-		if(activeBalls.size() > 1) { // two or more balls active
+		
+		ArrayList<Ball> activeBalls = setActiveBalls(environment);
+		
+		if(activeBalls.size() > 1 || activeBalls.size() == 0) { // no ball or two/more balls on field
 			
 			return timestamp;
 			
 		}
 		
-		if(activeBalls.size() > 0) {
+		if(activeBalls.size() == 1) {
 			
 			Ball activeBall = activeBalls.get(0);
 			
@@ -708,8 +746,9 @@ public class RuleV2 {
 			
 			double ret;
 			
-			//test top side
 			SoccerField field = environment.getPlayfield();
+			
+			// test top side
 			
 			// add tolerance to ball y position
 			Point3D ball_tolerance = new Point3D(ball.getCoordinates().getX(), ball.getCoordinates().getY() + tolerance, ball.getCoordinates().getZ());
@@ -726,9 +765,11 @@ public class RuleV2 {
 			}
 			
 			//test bottom side
-			ball_tolerance = new Point3D(ball.getCoordinates().getX(), ball.getCoordinates().getY() - tolerance, ball.getCoordinates().getZ());
 			
 			// substract tolerance to ball y position
+			ball_tolerance = new Point3D(ball.getCoordinates().getX(), ball.getCoordinates().getY() - tolerance, ball.getCoordinates().getZ());
+			
+			
 			ret = PointMethods.pointSideOfLine(ball_tolerance, field.getRightBottom(), field.getLeftBottom());
 			
 			// is ball within tolerance range
@@ -1109,16 +1150,17 @@ public class RuleV2 {
 			writer.write("Corner low accel(m/s²)" + Constants.CORNER_LOW_ACCELERATION + "\n");
 			writer.write("Corner execute accel(m/s²)" + Constants.CORNER_BALL_ACCELERATION + "\n");
 			
-			writer.write("Kickoff idle(m/s)" + Constants.BALL_IDLE + "\n");
+			writer.write("Kickoff idle(m/s)" + Constants.KICKOFF_BALL_IDLE + "\n");
 			writer.write("Kickoff low accel(m/s²)" + Constants.KICKOFF_LOW_ACCELERATION + "\n");
 			writer.write("Kickoff execute accel(m/s²)" + Constants.KICKOFF_BALL_ACCELERATION + "\n");
 			
-			writer.write("Throw-in idle(m/s)" + Constants.BALL_IDLE + "\n");
+			writer.write("Throw-in idle(m/s)" + Constants.BALL_THROW_IDLE + "\n");
 			writer.write("Throw-in low accel(m/s²)" + Constants.THROWIN_LOW_ACCELERATION + "\n");
 			writer.write("Throw-in execute accel(m/s²)" + Constants.THROWIN_BALL_ACCELERATION + "\n");
 			
 			writer.write("Corner check radius(mm)" + Constants.CORNER_AREA + "\n");
 			writer.write("Throw-in Y tolerance(mm)" + Constants.TOLERANCE_X_THROWIN + "\n");
+			writer.write("Goal exit tolerance(mm)" + Constants.TOLERANCE_BALL_EXIT + "\n");
 			
 			
 			writer.close();
