@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.10" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="de.landshut.haw.edu.ClientMain" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/ClientMain.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="137" x="2070" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="de.landshut.haw.edu.control.DataHandler" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/DataHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="206" x="58" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="de.landshut.haw.edu.control.ConnectionHandler" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/ConnectionHandler.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="167" x="1578" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="de.landshut.haw.edu.control.ModelLoader" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/ModelLoader.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="188" x="2247" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="de.landshut.haw.edu.control.algorithm.Algorithm" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/algorithm/Algorithm.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="194" x="2249" y="1629"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="de.landshut.haw.edu.control.algorithm.RuleV0" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/algorithm/RuleV0.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="621" width="349" x="2749" y="2807"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="de.landshut.haw.edu.control.algorithm.AlgorithmLoader" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/algorithm/AlgorithmLoader.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="188" x="517" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="de.landshut.haw.edu.control.algorithm.RuleV1" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/algorithm/RuleV1.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="477" width="302" x="1990" y="2807"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="de.landshut.haw.edu.control.algorithm.RuleV2" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/algorithm/RuleV2.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="657" width="377" x="2332" y="2807"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="de.landshut.haw.edu.control.algorithm.SoccerRuleAlgorithm" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/algorithm/SoccerRuleAlgorithm.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="190" x="2121" y="1966"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="de.landshut.haw.edu.control.algorithm.SoccerPatternAlgorithm" 
+    project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/algorithm/SoccerPatternAlgorithm.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="214" x="1715" y="2807"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="de.landshut.haw.edu.control.datahandling.SoccerDataUpdater" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/datahandling/SoccerDataUpdater.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="333" width="228" x="1447" y="2807"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="de.landshut.haw.edu.control.datahandling.DataUpdater" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/datahandling/DataUpdater.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="181" x="1936" y="1454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="14" language="java" name="de.landshut.haw.edu.control.datahandling.DataUpdaterInterface" 
+    project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/control/datahandling/DataUpdaterInterface.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="228" x="1981" y="1629"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="de.landshut.haw.edu.model.Team" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/Team.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="167" x="2104" y="4165"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="de.landshut.haw.edu.model.Field" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/Field.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="209" x="1548" y="4677"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="de.landshut.haw.edu.model.Participant" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/Participant.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="167" x="2292" y="4394"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="de.landshut.haw.edu.model.Sensor" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/Sensor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="477" width="267" x="2248" y="4888"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="de.landshut.haw.edu.model.Ball" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/Ball.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="131" x="2612" y="4165"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="de.landshut.haw.edu.model.environment.Environment" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/environment/Environment.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="297" width="206" x="1407" y="1629"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="de.landshut.haw.edu.model.environment.SoccerEnvironment" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/environment/SoccerEnvironment.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="387" width="242" x="1820" y="3504"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="de.landshut.haw.edu.model.soccer.GoalGate" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/soccer/GoalGate.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="154" x="1781" y="5405"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="de.landshut.haw.edu.model.soccer.SoccerField" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/soccer/SoccerField.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="314" x="1778" y="4888"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="de.landshut.haw.edu.model.soccer.Referee" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/soccer/Referee.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="154" x="1860" y="4677"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="de.landshut.haw.edu.model.soccer.Goalkeeper" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/soccer/Goalkeeper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="173" x="2248" y="4677"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="de.landshut.haw.edu.model.soccer.FieldPlayer" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/model/soccer/FieldPlayer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="154" x="2054" y="4677"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="de.landshut.haw.edu.puffer.PufferHolder" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/puffer/PufferHolder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="222" x="1674" y="1454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="de.landshut.haw.edu.util.Constants" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/Constants.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1377" width="245" x="1785" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="de.landshut.haw.edu.util.PointMethods" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/PointMethods.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="273" x="745" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="de.landshut.haw.edu.util.ErrorCodes" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/ErrorCodes.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="173" x="304" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="de.landshut.haw.edu.util.ResultLine" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/ResultLine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="801" width="173" x="1674" y="1966"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="de.landshut.haw.edu.util.Event" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/Event.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="621" width="217" x="2332" y="3504"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="de.landshut.haw.edu.util.TransmissionObject" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/TransmissionObject.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="267" x="1674" y="1629"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="de.landshut.haw.edu.util.ConvertUtil" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/ConvertUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="303" x="1058" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="de.landshut.haw.edu.util.Point3D" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/Point3D.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="172" x="1569" y="5405"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="de.landshut.haw.edu.util.Point2D" project="GameClient" 
+    file="/GameClient/src/main/java/de/landshut/haw/edu/util/Point2D.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="137" x="1401" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="37">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="38" name="velocityVector"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="40">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="41">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="42" name="players"/>      
+      <multiplicity id="43" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="45" name="goalBottom"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="48" name="centerPoint"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="51" name="fullEventList"/>      
+      <multiplicity id="52" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="53">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="54">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="55" name="algorithm"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <bendpoint x="2600" y="3504"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="58" name="bottomHalf"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="60">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="61" name="dataUpdater"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <bendpoint x="2493" y="4165"/>    
+    <bendpoint x="2493" y="4394"/>    
+    <bendpoint x="2493" y="4677"/>    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="64" name="sensor"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="66">    
+    <bendpoint x="2238" y="3504"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="67" name="bottomHalf"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="69">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="70" name="rs"/>      
+      <multiplicity id="71" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="72">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="73" name="environment"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="75">    
+    <bendpoint x="1416" y="2807"/>    
+    <bendpoint x="1416" y="1966"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="76">    
+    <bendpoint x="2579" y="3504"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="77" name="topHalf"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="80" name="goalTop"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="82">    
+    <bendpoint x="2684" y="3504"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="83" name="possibleActiveBall"/>      
+      <multiplicity id="84" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="85">    
+    <bendpoint x="1787" y="4165"/>    
+    <bendpoint x="1787" y="4394"/>    
+    <bendpoint x="1787" y="4677"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="86" name="playfield"/>      
+      <multiplicity id="87" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="88">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="89" name="accelerationVector"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="91">    
+    <bendpoint x="2113" y="3504"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="92" name="bottomHalf"/>      
+      <multiplicity id="93" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="94">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="95" name="idLeftArm"/>      
+      <multiplicity id="96" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="97">    
+    <bendpoint x="2621" y="3504"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="98" name="activeBalls"/>      
+      <multiplicity id="99" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="100">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="101">    
+    <bendpoint x="1599" y="4888"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="102" name="leftBottom"/>      
+      <multiplicity id="103" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="104">    
+    <bendpoint x="1959" y="2807"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="105" name="environment"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="107">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="108" name="coordinates"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="110">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="111" name="INPUT_PUFFER"/>      
+      <multiplicity id="112" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="113">    
+    <bendpoint x="1536" y="4888"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="114" name="rightTop"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="116">    
+    <bendpoint x="1557" y="4888"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="117" name="rightBottom"/>      
+      <multiplicity id="118" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="119">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="120" name="idRightArm"/>      
+      <multiplicity id="121" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="122">    
+    <bendpoint x="2092" y="3504"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="123" name="topHalf"/>      
+      <multiplicity id="124" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="125">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="126" name="environment"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="128">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="129" name="balls"/>      
+      <multiplicity id="130" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="131">    
+    <bendpoint x="2642" y="3504"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="132" name="activeBalls"/>      
+      <multiplicity id="133" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="134">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="135">    
+    <bendpoint x="1829" y="4165"/>    
+    <bendpoint x="1829" y="4394"/>    
+    <bendpoint x="1829" y="4677"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="136" name="idSensorMap"/>      
+      <multiplicity id="137" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="138">    
+    <bendpoint x="2705" y="3504"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="139" name="activeBall"/>      
+      <multiplicity id="140" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="141">    
+    <bendpoint x="2217" y="3504"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="142" name="topHalf"/>      
+      <multiplicity id="143" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="144">    
+    <bendpoint x="1578" y="4888"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="145" name="leftTop"/>      
+      <multiplicity id="146" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="147">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="148" name="current"/>      
+      <multiplicity id="149" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="150">    
+    <bendpoint x="2472" y="4677"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="151" name="leftLeg"/>      
+      <multiplicity id="152" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="153">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="154">    
+    <bendpoint x="1766" y="3504"/>    
+    <bendpoint x="1766" y="4165"/>    
+    <bendpoint x="1808" y="4394"/>    
+    <bendpoint x="1808" y="4677"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="155" name="idSensorMap"/>      
+      <multiplicity id="156" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="157">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="158" name="fullEventList"/>      
+      <multiplicity id="159" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="160">    
+    <bendpoint x="1643" y="1966"/>    
+    <bendpoint x="1643" y="1629"/>    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="13"/>  
+  </generalization>  
+  <association id="161">    
+    <bendpoint x="2451" y="4677"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="162" name="rightLeg"/>      
+      <multiplicity id="163" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="164">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="165" name="fullEventList"/>      
+      <multiplicity id="166" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="167">    
+    <bendpoint x="2663" y="3504"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="168" name="markedThrowInBall"/>      
+      <multiplicity id="169" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="170">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="171" name="teamB"/>      
+      <multiplicity id="172" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="173">    
+    <bendpoint x="2301" y="3504"/>    
+    <bendpoint x="2301" y="4165"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="174" name="markedThrowInPlayer"/>      
+      <multiplicity id="175" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="176">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="177" name="environment"/>      
+      <multiplicity id="178" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="179">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="180" name="HOLD_PUFFER"/>      
+      <multiplicity id="181" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="182">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="183" name="environment"/>      
+      <multiplicity id="184" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="185">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="186" name="rules3"/>      
+      <multiplicity id="187" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="188">    
+    <bendpoint x="2257" y="1454"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="189" name="algorithm"/>      
+      <multiplicity id="190" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="191">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="192" name="teamA"/>      
+      <multiplicity id="193" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="194">    
+    <bendpoint x="1643" y="1454"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="195" name="environment"/>      
+      <multiplicity id="196" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="197">    
+    <bendpoint x="2773" y="3504"/>    
+    <bendpoint x="2773" y="4165"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="198" name="markedThrowIn"/>      
+      <multiplicity id="199" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="200">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="201" name="environment"/>      
+      <multiplicity id="202" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="203">    
+    <bendpoint x="2065" y="4165"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="204" name="referees"/>      
+      <multiplicity id="205" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="206">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="207">    
+    <bendpoint x="2514" y="4394"/>    
+    <bendpoint x="2514" y="4677"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="208" name="ball"/>      
+      <multiplicity id="209" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,8 +1,9 @@
 package de.landshut.haw.edu.control.algorithm;
 
+import de.landshut.haw.edu.model.environment.Environment;
 import de.landshut.haw.edu.model.environment.SoccerEnvironment;
 
-public class SoccerPatternAlgorithm {
+public class SoccerPatternAlgorithm extends Algorithm {
 		
 	
 	private SoccerEnvironment environment;
@@ -19,6 +20,27 @@ public class SoccerPatternAlgorithm {
 		
 	}
 	// load existing patterns
+
+
+	@Override
+	public void processData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void endTransmission() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setEnvironment(Environment environment) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	// get current environment as picture
 	
