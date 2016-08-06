@@ -4,9 +4,7 @@ import java.io.Serializable;
 
 public class Team implements Serializable {
 	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 8456226472583640770L;
 
 	private final String name;
@@ -14,6 +12,7 @@ public class Team implements Serializable {
 	private Participant[] players;
 	
 	private int playerNextFree;
+	
 	
 	public Team(String name, Participant[] team) {
 		super();

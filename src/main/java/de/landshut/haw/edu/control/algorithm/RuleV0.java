@@ -17,7 +17,7 @@ import de.landshut.haw.edu.util.Event;
 import de.landshut.haw.edu.util.Point3D;
 import de.landshut.haw.edu.util.PointMethods;
 
-public class SoccerRules {
+public class RuleV0 {
 		
 	private Ball activeBall, possibleActiveBall;
 	
@@ -38,7 +38,7 @@ public class SoccerRules {
 	
 	
 	
-	public SoccerRules() {
+	public RuleV0() {
 		fullEventList = null;
 		
 		activeBall = null;

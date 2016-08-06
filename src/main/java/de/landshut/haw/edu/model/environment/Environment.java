@@ -7,13 +7,11 @@ import de.landshut.haw.edu.model.Ball;
 import de.landshut.haw.edu.model.Field;
 import de.landshut.haw.edu.model.Participant;
 import de.landshut.haw.edu.model.Team;
+import de.landshut.haw.edu.util.ErrorCodes;
 
 public abstract class Environment implements Serializable {
 
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3994597867183033723L;
 	
 	/**
@@ -52,20 +50,30 @@ public abstract class Environment implements Serializable {
 	 * Wait until environment is marked updated.
 	 */
 	public synchronized void analyze() {
-        if (!isUpdated) {
-            try {
+      
+		if (!isUpdated) {
+            
+        	try {
+        		
                 wait();
+                
             } catch (InterruptedException e) {
-                e.printStackTrace();
+            	
+                System.err.println("Interrupt error in environment analyze.");
+                
+                System.exit(ErrorCodes.SLEEP_INTERUPT);
             }
         }
     }
+	
 	
 	/**
 	 * Mark environment analyzed and wake up waiting (update) thread. 
 	 */
 	public synchronized void isAnalyzed() {
+		
 		isUpdated = false;
+		
 	    notify();
 	}
 	
@@ -74,11 +82,18 @@ public abstract class Environment implements Serializable {
 	 * Wait until environment is marked analyzed.
 	 */
     public synchronized void update() {
-        if (isUpdated) {
+       
+    	if (isUpdated) {
+    		
             try {
+            	
                 wait();
+                
             } catch (InterruptedException e) {
-                e.printStackTrace();
+        		
+            	System.err.println("Interrupt error in environment update.");
+            	
+            	System.exit(ErrorCodes.SLEEP_INTERUPT);
             }
         }
     }
@@ -88,7 +103,9 @@ public abstract class Environment implements Serializable {
 	 * Mark environment updated and wake up waiting (analyze) thread. 
 	 */
     public synchronized void isUpdated() {
+    	
     	 isUpdated = true;
+    	 
          notify();
     }
 	

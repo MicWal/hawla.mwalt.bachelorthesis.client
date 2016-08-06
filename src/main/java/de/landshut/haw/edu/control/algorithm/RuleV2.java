@@ -115,9 +115,9 @@ public class RuleV2 {
 		if(fullEventList != null) {
 			
 			//check throw ins
-			checkPossibleThrowIn();
-			
-			checkExecutedThrowIn();
+//			checkPossibleThrowIn();
+//			
+//			checkExecutedThrowIn();
 		}
 		
 	}
@@ -262,7 +262,6 @@ public class RuleV2 {
 							goal_line = "";
 
 							goal_line_Timestamp = 0;
-							
 
 							
 						} // add goal 
@@ -275,9 +274,9 @@ public class RuleV2 {
 							} else if(goal_line.equals(Event.BALL_EXIT_BOTTOM_GOAL)) {
 								
 								addEvent(topHalf.getName() + " " + Event.GOAL , goal_line_Timestamp, null);
-		
+
 							}
-						
+							
 							// reset values
 							goal_line_Timestamp = 0;
 							
@@ -493,10 +492,10 @@ public class RuleV2 {
 					
 			if(side.equals(Event.BALL_EXIT_LEFT_SIDE)) { 
 				
-				Point3D leftLeg = new Point3D(p.getLeftLeg().getCoordinates().getX() + Constants.TOLERANCE_Y_THROWIN, 
+				Point3D leftLeg = new Point3D(p.getLeftLeg().getCoordinates().getX() + Constants.TOLERANCE_X_THROWIN, 
 						p.getLeftLeg().getCoordinates().getY(), p.getLeftLeg().getCoordinates().getZ());
 				
-				Point3D rightLeg = new Point3D(p.getRightLeg().getCoordinates().getX() + Constants.TOLERANCE_Y_THROWIN, 
+				Point3D rightLeg = new Point3D(p.getRightLeg().getCoordinates().getX() + Constants.TOLERANCE_X_THROWIN, 
 						p.getRightLeg().getCoordinates().getY(), p.getRightLeg().getCoordinates().getZ());
 				
 				
@@ -517,8 +516,7 @@ public class RuleV2 {
 						if(PointMethods.pointInsideCirle(leftLeg, Constants.RADIUS_THROW_IN, ball) &&
 									ball.getZ() > leftLeg.getZ() + Constants.THROW_IN_MINIMUM_HEIGHT) {
 							
-//							if(velocityCheck(b, Constants.BALL_IDLE, false))	{
-//									&& accelerationCheck(b, Constants.THROWIN_LOW_ACCELERATION, false)) {
+							if(velocityCheck(b, Constants.BALL_THROW_IDLE, false)) {
 								
 								addEvent(Event.POSSIBLE_THROW_IN_LEFT, environment.getTimestamp(), p.getLeftLeg());
 								
@@ -528,16 +526,16 @@ public class RuleV2 {
 								
 								side_line = Event.BALL_EXIT_LEFT_SIDE;
 								
-//							}
+							}
 						}
 					}	
 				}
 			} else if (side.equals(Event.BALL_EXIT_RIGHT_SIDE)) { 
 				
-				Point3D leftLeg = new Point3D(p.getLeftLeg().getCoordinates().getX() - Constants.TOLERANCE_Y_THROWIN, 
+				Point3D leftLeg = new Point3D(p.getLeftLeg().getCoordinates().getX() - Constants.TOLERANCE_X_THROWIN, 
 						p.getLeftLeg().getCoordinates().getY(), p.getLeftLeg().getCoordinates().getZ());
 				
-				Point3D rightLeg = new Point3D(p.getRightLeg().getCoordinates().getX() - Constants.TOLERANCE_Y_THROWIN, 
+				Point3D rightLeg = new Point3D(p.getRightLeg().getCoordinates().getX() - Constants.TOLERANCE_X_THROWIN, 
 						p.getRightLeg().getCoordinates().getY(), p.getRightLeg().getCoordinates().getZ());
 				
 				
@@ -559,9 +557,7 @@ public class RuleV2 {
 						if(PointMethods.pointInsideCirle(leftLeg, Constants.RADIUS_THROW_IN, ball) &&
 									ball.getZ() > leftLeg.getZ() + Constants.THROW_IN_MINIMUM_HEIGHT) {
 							
-//							if(velocityCheck(b, Constants.BALL_IDLE, false)) { 
-//									&& accelerationCheck(b, Constants.THROWIN_LOW_ACCELERATION, false)) {
-								
+							if(velocityCheck(b, Constants.BALL_THROW_IDLE, false)) {
 								
 								addEvent(Event.POSSIBLE_THROW_IN_RIGHT, environment.getTimestamp(), p.getLeftLeg());
 								
@@ -571,7 +567,7 @@ public class RuleV2 {
 	
 								side_line = Event.BALL_EXIT_RIGHT_SIDE;
 								
-//							}
+							}
 						}
 					}	
 				}
@@ -609,10 +605,10 @@ public class RuleV2 {
 				
 				if(side_line.equals(Event.BALL_EXIT_LEFT_SIDE)) { // test left side
 					
-					Point3D leftLeg = new Point3D(markedThrowInPlayer.getLeftLeg().getCoordinates().getX() + Constants.TOLERANCE_Y_THROWIN, 
+					Point3D leftLeg = new Point3D(markedThrowInPlayer.getLeftLeg().getCoordinates().getX() + Constants.TOLERANCE_X_THROWIN, 
 							markedThrowInPlayer.getLeftLeg().getCoordinates().getY(), markedThrowInPlayer.getLeftLeg().getCoordinates().getZ());
 					
-					Point3D rightLeg = new Point3D(markedThrowInPlayer.getRightLeg().getCoordinates().getX() + Constants.TOLERANCE_Y_THROWIN, 
+					Point3D rightLeg = new Point3D(markedThrowInPlayer.getRightLeg().getCoordinates().getX() + Constants.TOLERANCE_X_THROWIN, 
 							markedThrowInPlayer.getRightLeg().getCoordinates().getY(), markedThrowInPlayer.getRightLeg().getCoordinates().getZ());			
 					
 					Point3D leftBot = environment.getPlayfield().getLeftBottom();
@@ -627,7 +623,7 @@ public class RuleV2 {
 						
 						if(ball > 0 && markedThrowInBall.getBall().getCoordinates().getZ() > leftLeg.getZ() + Constants.THROW_IN_MINIMUM_HEIGHT) {
 							
-							if(accelerationCheck(markedThrowInBall, Constants.THROWIN_BALL_ACCELERATION, true)) {
+							if(velocityCheck(markedThrowInBall, Constants.BALL_THROW_IDLE, true)) {
 								
 								addEvent(teamName + " " + Event.EXECUTE_THROW_IN_LEFT, environment.getTimestamp(), null);
 							
@@ -642,10 +638,10 @@ public class RuleV2 {
 					}
 				} else if(side_line.equals(Event.BALL_EXIT_RIGHT_SIDE)) { // test right side
 					
-					Point3D leftLeg = new Point3D(markedThrowInPlayer.getLeftLeg().getCoordinates().getX() - Constants.TOLERANCE_Y_THROWIN, 
+					Point3D leftLeg = new Point3D(markedThrowInPlayer.getLeftLeg().getCoordinates().getX() - Constants.TOLERANCE_X_THROWIN, 
 							markedThrowInPlayer.getLeftLeg().getCoordinates().getY(), markedThrowInPlayer.getLeftLeg().getCoordinates().getZ());
 					
-					Point3D rightLeg = new Point3D(markedThrowInPlayer.getRightLeg().getCoordinates().getX() - Constants.TOLERANCE_Y_THROWIN, 
+					Point3D rightLeg = new Point3D(markedThrowInPlayer.getRightLeg().getCoordinates().getX() - Constants.TOLERANCE_X_THROWIN, 
 							markedThrowInPlayer.getRightLeg().getCoordinates().getY(), markedThrowInPlayer.getRightLeg().getCoordinates().getZ());
 					
 					
@@ -659,10 +655,9 @@ public class RuleV2 {
 						
 						double ball = PointMethods.pointSideOfLine(markedThrowInBall.getBall().getCoordinates(), rightBot, rightTop);
 						
-						// ball inside field
 						if(ball < 0 && markedThrowInBall.getBall().getCoordinates().getZ() > leftLeg.getZ() + Constants.THROW_IN_MINIMUM_HEIGHT) {
 					
-							if(accelerationCheck(markedThrowInBall, Constants.THROWIN_BALL_ACCELERATION, true)) {
+							if(velocityCheck(markedThrowInBall, Constants.BALL_THROW_IDLE, true)) {
 								
 								addEvent(teamName + " " + Event.EXECUTE_THROW_IN_RIGHT, environment.getTimestamp(), null);
 															
@@ -1123,7 +1118,7 @@ public class RuleV2 {
 			writer.write("Throw-in execute accel(m/s²)" + Constants.THROWIN_BALL_ACCELERATION + "\n");
 			
 			writer.write("Corner check radius(mm)" + Constants.CORNER_AREA + "\n");
-			writer.write("Throw-in Y tolerance(mm)" + Constants.TOLERANCE_Y_THROWIN + "\n");
+			writer.write("Throw-in Y tolerance(mm)" + Constants.TOLERANCE_X_THROWIN + "\n");
 			
 			
 			writer.close();

@@ -1,5 +1,10 @@
 package de.landshut.haw.edu.util;
 
+/**
+ * Contains all constants.
+ * @author Michael
+ *
+ */
 public class Constants {
 	
 	private Constants()  {}
@@ -115,10 +120,6 @@ public class Constants {
 	 *				Transmisison object ID 
 	 */
 	
-	public final static long TRANSMISSION_VERSION_UID = -820413593466554404L;
-	
-	public static final long RESULTLINE_VERSION_UID = -820413593466551000L;
-
 	public static final String DELIMETER = " ";
 
 	public static final int MAPPING_LINE = 0;
@@ -145,7 +146,7 @@ public class Constants {
 	
 	public static final double RADIUS_GOALKICK = 3000; // in millimeter
 	
-	public static final double TOLERANCE_Y_THROWIN = 100; // in mm 
+	public static final double TOLERANCE_X_THROWIN = 100; // in mm 
 	
 	public static final double TOLERANCE_BALL_EXIT = 100; // in mm
 	
@@ -155,7 +156,9 @@ public class Constants {
 
 	public static final double BALL_IDLE = 1; // in m/s 
 	
-	public static final double BALL_SLOW = 2; // in m/s 
+	public static final double BALL_SLOW = 3; // in m/s 
+	
+	public static final double BALL_THROW_IDLE = 2; // in m/s 
 	
 	public static final double CORNER_BALL_ACCELERATION = 35.0; // in m/s²
 	
@@ -167,7 +170,7 @@ public class Constants {
 	
 	public static final double THROWIN_LOW_ACCELERATION = 10.0; // in m/s²
 	
-	public static final double THROWIN_BALL_ACCELERATION = 30; // in m/s²
+	public static final double THROWIN_BALL_ACCELERATION = 20; // in m/s²
 	
 	public static final String FIELD_EXIT_LEFT = "LEFT";
 	
@@ -182,6 +185,8 @@ public class Constants {
 	public static final int REMOVE_PUFFER = 5000;
 
 	public static final double KICK_ACCELERATION = 0;
+
+
 
 
 

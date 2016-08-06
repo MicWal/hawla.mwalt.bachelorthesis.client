@@ -5,7 +5,8 @@ import java.util.ArrayList;
 
 public class TransmissionObject implements Serializable {
 
-	private static final long serialVersionUID = Constants.TRANSMISSION_VERSION_UID;
+	
+	private static final long serialVersionUID = -820413593466554404L;
 	
 	private String transmission_status;
 
@@ -35,6 +36,7 @@ public class TransmissionObject implements Serializable {
 
 	
 	public TransmissionObject(TransmissionObject transObj) {
+		
 		transmission_status = transObj.getTransmission_status();
 		
 		rs = transObj.getRs();
@@ -59,10 +61,13 @@ public class TransmissionObject implements Serializable {
 	
 	
 	public void unreferenceArrayList() {
-		if(rs != null) {
-			rs.clear();
-			rs = null;
-		}	
 		
+		if(rs != null) {
+			
+			rs.clear();
+			
+			rs = null;
+			
+		}
 	}
 }

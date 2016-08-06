@@ -6,9 +6,7 @@ import de.landshut.haw.edu.util.Constants;
 
 public class GoalGate implements Serializable{
 	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -8015861964692024168L;
 
 	// length in cm
@@ -22,11 +20,13 @@ public class GoalGate implements Serializable{
 		super();
 		
 		if(goalLength == 0 && goalWidth == 0) {
+			
 			this.goalLength = Constants.GATE_DEFAULT_LENGTH;
 			
 			this.goalWidth = Constants.GATE_DEFAULT_WIDTH;
 			
 		} else {
+			
 			this.goalLength = goalLength;
 			
 			this.goalWidth = goalWidth;

@@ -10,8 +10,6 @@ public class Participant implements Serializable {
 	private static final long serialVersionUID = -4388208287017575965L;
 
 	private String name;
-
-	private boolean isActive;
 	
 	private Sensor leftLeg;
 	
@@ -22,8 +20,9 @@ public class Participant implements Serializable {
 		super();
 		
 		this.name = name;
-		this.isActive = false;
+		
 		this.leftLeg = new Sensor(idLeftLeg);
+		
 		this.rightLeg = new Sensor(idRightLeg);
 	}
 
@@ -57,15 +56,6 @@ public class Participant implements Serializable {
 		this.name = name;
 	}
 
-
-	public boolean isActive() {
-		return isActive;
-	}
-
-
-	public void setIsActive(boolean isActive) {
-		this.isActive = isActive;
-	}
 	
 	public boolean compare(Participant p) {
 	
@@ -74,6 +64,7 @@ public class Participant implements Serializable {
 			if(this.leftLeg.getId() == p.getLeftLeg().getId()) {
 				
 				if(this.rightLeg.getId() ==  p.getRightLeg().getId()) {
+					
 					return true;
 				}
 			}

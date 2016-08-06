@@ -19,9 +19,7 @@ import de.landshut.haw.edu.util.ConvertUtil;
 
 public class SoccerEnvironment extends Environment {
 	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -9139548785914406273L;
 
 	private SoccerField playfield;
@@ -50,6 +48,11 @@ public class SoccerEnvironment extends Environment {
 	}
 
 	
+	/**
+	 * Initialize the environment with given data.<br>
+	 * Data has to be converted from string array to JSONObject.
+	 * @param data contains lines of a JSONObject.
+	 */
 	public void init(String[] data) {
 		
 		String converted = ConvertUtil.stringArrayToString(data);
@@ -88,6 +91,7 @@ public class SoccerEnvironment extends Environment {
 				idSensorMap.put((int) value, b.getBall()); //add ball to map (id->sensor)
 			}
 		} else {
+			
 			System.out.println("No balls in meta file found.");
 		}   
 	}
@@ -97,6 +101,7 @@ public class SoccerEnvironment extends Environment {
 	
 		// should never be null because server test meta data against schema
 		if(teams != null) {
+			
 			if(teams.size() == Constants.KEYWORD_TEAMS_AMOUNT) {
 				
 				teamA = initTeam((JSONObject)teams.get(Constants.KEYWORD_TEAM_A));
@@ -104,9 +109,11 @@ public class SoccerEnvironment extends Environment {
 				teamB =	initTeam((JSONObject)teams.get(Constants.KEYWORD_TEAM_B));	
 				
 			} else {
+				
 				System.out.println("Insufficent teams in meta file.");
 			}
 		} else {
+			
 			System.out.println("No teams in meta file found.");
 		}
 		
@@ -115,57 +122,63 @@ public class SoccerEnvironment extends Environment {
 
 	private Team initTeam(JSONObject team) {
 		
-		ArrayList<Participant> memberList = new ArrayList<Participant>();
-		
-		String name = (String) (team.get(Constants.KEYWORD_TEAMNAME));
-		
-		JSONArray members = (JSONArray) (team.get(Constants.KEYWORD_MEMBERS));
-		
-		@SuppressWarnings("rawtypes")
-		Iterator i = members.iterator();
-
-		// take each value from the json array separately
-		while (i.hasNext()) {
+		if(team != null) {
 			
-			JSONObject innerObj = (JSONObject) i.next();
-			if(innerObj.size() == Constants.GOALKEEPER_ELEMENTS) {
+			ArrayList<Participant> memberList = new ArrayList<Participant>();
+			
+			String name = (String) (team.get(Constants.KEYWORD_TEAMNAME));
+			
+			JSONArray members = (JSONArray) (team.get(Constants.KEYWORD_MEMBERS));
+			
+			@SuppressWarnings("rawtypes")
+			Iterator i = members.iterator();
+	
+			// take each value from the json array separately
+			while (i.hasNext()) {
 				
-				Goalkeeper p = new Goalkeeper( (String) innerObj.get(Constants.KEYWORD_NAME), 
-								(int) (long) innerObj.get(Constants.KEYWORD_LEFT_LEG), 
-									(int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG),
-										(int) (long) innerObj.get(Constants.KEYWORD_LEFT_ARM), 
-											(int) (long) innerObj.get(Constants.KEYWORD_RIGHT_ARM));
-				memberList.add(p);
+				JSONObject innerObj = (JSONObject) i.next();
 				
-				//add goalkeeper sensors with id to map
-				idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_LEFT_LEG), p.getLeftLeg());
-				
-				idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG), p.getRightLeg());
-				
-				idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_LEFT_ARM), p.getLeftArm());
-				
-				idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_RIGHT_ARM), p.getRightArm());
-				
-			} else if (innerObj.size() == Constants.PLAYER_ELEMENTS) {
-				
-				Participant p = new Participant( (String) innerObj.get(Constants.KEYWORD_NAME), 
+				if(innerObj.size() == Constants.GOALKEEPER_ELEMENTS) {
+					
+					Goalkeeper p = new Goalkeeper( (String) innerObj.get(Constants.KEYWORD_NAME), 
 									(int) (long) innerObj.get(Constants.KEYWORD_LEFT_LEG), 
-										(int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG));
-				memberList.add(p);
+										(int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG),
+											(int) (long) innerObj.get(Constants.KEYWORD_LEFT_ARM), 
+												(int) (long) innerObj.get(Constants.KEYWORD_RIGHT_ARM));
+					memberList.add(p);
+					
+					//add goalkeeper sensors with id to map
+					idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_LEFT_LEG), p.getLeftLeg());
+					
+					idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG), p.getRightLeg());
+					
+					idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_LEFT_ARM), p.getLeftArm());
+					
+					idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_RIGHT_ARM), p.getRightArm());
+					
+				} else if (innerObj.size() == Constants.PLAYER_ELEMENTS) {
+					
+					Participant p = new Participant( (String) innerObj.get(Constants.KEYWORD_NAME), 
+										(int) (long) innerObj.get(Constants.KEYWORD_LEFT_LEG), 
+											(int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG));
+					memberList.add(p);
+					
+					//add player sensors with id to map
+					idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_LEFT_LEG), p.getLeftLeg());
+					
+					idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG), p.getRightLeg());
+				}
 				
-				//add player sensors with id to map
-				idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_LEFT_LEG), p.getLeftLeg());
-				
-				idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG), p.getRightLeg());
 			}
 			
+			Participant[] teamArr = new Participant[memberList.size()];
+			
+			teamArr = memberList.toArray(teamArr);
+	
+			return new Team(name, teamArr);
 		}
 		
-		Participant[] teamArr = new Participant[memberList.size()];
-		
-		teamArr = memberList.toArray(teamArr);
-
-		return new Team(name, teamArr);
+		return null;
 	}
 	
 	
@@ -194,6 +207,7 @@ public class SoccerEnvironment extends Environment {
 				idSensorMap.put((int) (long) innerObj.get(Constants.KEYWORD_RIGHT_LEG), p.getRightLeg());
 			}
 		} else {
+			
 			System.out.println("No referee in meta file found.");
 		}
 	}

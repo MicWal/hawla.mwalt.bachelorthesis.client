@@ -25,6 +25,7 @@ public class Field implements Serializable {
 		
 		this.leftBottom = leftBottom;
 		this.leftTop = leftTop;
+		
 		this.rightBottom = rightBottom;
 		this.rightTop = rightTop;
 	}

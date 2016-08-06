@@ -15,6 +15,7 @@ public class PointMethods {
      * @author Copyright (c) 1970-2003, Wm. Randolph Franklin 
      */
     public static boolean contains(Point3D[] points, Point3D test) {
+    	
     	int i;
     	
     	int j;
@@ -23,8 +24,8 @@ public class PointMethods {
 	    
 	    for (i = 0, j = points.length - 1; i < points.length; j = i++) {
 	        
-	    	if ((points[i].getY() > test.getY()) != (points[j].getY() > test.getY()) &&
-	            (test.getX() < (points[j].getX() - points[i].getX()) * (test.getY() - points[i].getY()) / 
+	    	if ((points[i].getY() > test.getY()) != (points[j].getY() > test.getY()) 
+	    			&& (test.getX() < (points[j].getX() - points[i].getX()) * (test.getY() - points[i].getY()) / 
 	            			( points[j].getY()-points[i].getY() ) + points[i].getX())) {
 	          
 	    		result = !result;
@@ -66,9 +67,11 @@ public class PointMethods {
 		double rPow = Math.pow(radius, 2);
 		
 		if(dPow <= rPow) {
+			
 			return true;
 			
 		} else {
+			
 			return false;
 		}
 	}

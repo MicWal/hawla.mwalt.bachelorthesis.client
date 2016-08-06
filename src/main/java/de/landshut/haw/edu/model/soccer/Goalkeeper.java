@@ -6,9 +6,6 @@ import de.landshut.haw.edu.model.Sensor;
 public class Goalkeeper extends Participant{
 	
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 7593307581254091898L;
 
 	private Sensor idLeftArm;
@@ -20,6 +17,7 @@ public class Goalkeeper extends Participant{
 		super(name, idLeftLeg, idRightLeg);
 
 		this.idLeftArm = new Sensor(idLeftArm);
+		
 		this.idRightArm = new Sensor(idRightArm);
 	}
 

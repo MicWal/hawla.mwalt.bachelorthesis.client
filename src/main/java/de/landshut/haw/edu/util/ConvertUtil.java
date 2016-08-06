@@ -21,6 +21,7 @@ public class ConvertUtil {
 	public static Object deepCopy(Object originalObj) {
 		
 	      ObjectOutputStream oos = null;
+	      
 	      ObjectInputStream ois = null;
 	      
 	      try {
@@ -30,6 +31,7 @@ public class ConvertUtil {
 	         
 	         // serialize and pass the object
 	         oos.writeObject(originalObj);
+	         
 	         oos.flush();
 	         
 	         ByteArrayInputStream bin = new ByteArrayInputStream(bos.toByteArray());
@@ -40,17 +42,23 @@ public class ConvertUtil {
 	         return ois.readObject(); 
 	         
 	      } catch(Exception e) {
+	    	  
 	         System.err.println("Exception in cloning object.");
+	         
 	         e.printStackTrace();
 	         
 	      } finally {
+	    	  
 	    	  try {
 	        	 oos.close();
+	        	 
 	        	 ois.close();
 	        	 
 	    	  } catch (IOException e) {
+	    		  
 	    		  System.err.println("Exception closing cloning object stream.");
-				e.printStackTrace();
+	    		  
+	    		  e.printStackTrace();
 	    	  }
 	      }
 	      
@@ -70,17 +78,28 @@ public class ConvertUtil {
 			StringBuilder builder = new StringBuilder();
 			
 			for(int i = 0; i < data.length; i++) {
+				
 				builder.append(data[i] + " \n");
+				
 			}
+			
 			return builder.toString();
 			
 		} else {
+			
 			return null;
+			
 		}
 	}
 	
 	
 	
+	
+	/**
+	 * Convert a string array to a HashMap
+	 * @param data
+	 * @return
+	 */
 	public static HashMap<String, Integer> stringArrayToHashMap(String[] data) {
 		
 		if(data != null) {
@@ -88,13 +107,17 @@ public class ConvertUtil {
 			HashMap<String, Integer> builder = new HashMap<String, Integer>();
 			
 			for(int i=0; i < data.length; i++) {
+				
 				builder.put(data[i], i);
+				
 			}
 			
 			return builder;
-		}
-		else {
+			
+		} else {
+			
 			return null;
+			
 		}	
 	}
 	

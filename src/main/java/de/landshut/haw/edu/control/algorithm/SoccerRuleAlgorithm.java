@@ -13,10 +13,6 @@ public class SoccerRuleAlgorithm extends Algorithm {
 	 */
 	private SoccerEnvironment environment;
 	
-	private SoccerRules rules;
-	
-	private RuleV1 rules2;
-	
 	private RuleV2 rules3;
 	
 
@@ -24,10 +20,6 @@ public class SoccerRuleAlgorithm extends Algorithm {
 	public SoccerRuleAlgorithm() {
 		
 		endTransmission = false;
-		
-//		rules = new SoccerRules();
-		
-//		rules2 = new RuleGoal();
 		
 		rules3 = new RuleV2();
 	}
@@ -38,11 +30,7 @@ public class SoccerRuleAlgorithm extends Algorithm {
 		
 		environment.analyze();
 		
-		// check environment for new event
-//		rules.checkAgainstRules(environment);
-		
-//		rules2.checkAgainstRules(environment);
-		
+		// check environment for new event	
 		rules3.checkAgainstRules(environment);
 		
 //		addSnapshotToHoldPuffer();

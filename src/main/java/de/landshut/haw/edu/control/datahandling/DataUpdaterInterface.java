@@ -5,6 +5,7 @@ import de.landshut.haw.edu.util.TransmissionObject;
 
 public interface  DataUpdaterInterface {
 
+	
 	/**
 	 * Update all sensors with latest information in content.
 	 * @param content
@@ -12,10 +13,19 @@ public interface  DataUpdaterInterface {
 	void update(String[] content);
 	
 	
+	/**
+	 * Initialize the environment with meta data (which contains sensor data).
+	 * @param content
+	 */
 	void initEnvironment(String[] content);
 	
-
+	
+	/**
+	 * Set the environment which the DataUpdater will update.
+	 * @param environment
+	 */
 	void setEnvironment(Environment environment);
+	
 	
 	/**
 	 * Select appropriate action depending on status of the object.

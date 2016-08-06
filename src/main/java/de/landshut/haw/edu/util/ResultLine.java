@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 public class ResultLine implements Serializable {
 	
-	private static final long serialVersionUID = Constants.RESULTLINE_VERSION_UID;
+	
+	private static final long serialVersionUID = -820413593466551000L;
 	
 	private int id;
 	
@@ -32,6 +33,7 @@ public class ResultLine implements Serializable {
 	
 	private double accelerationZ;
 
+	
 	public int getId() {
 		return id;
 	}

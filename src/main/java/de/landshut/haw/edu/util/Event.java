@@ -9,6 +9,7 @@ import de.landshut.haw.edu.model.Sensor;
  */
 public class Event {
 	
+	
 	public static final String BALL_EXIT_LEFT_SIDE = "Ball left over left side line";
 	
 	public static final String BALL_EXIT_RIGHT_SIDE = "Ball left over right side line";

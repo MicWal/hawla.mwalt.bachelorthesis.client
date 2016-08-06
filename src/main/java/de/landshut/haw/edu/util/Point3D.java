@@ -4,9 +4,7 @@ import java.io.Serializable;
 
 public class Point3D implements Serializable{
 	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -6123061003707969117L;
 
 	private double x;
@@ -20,7 +18,9 @@ public class Point3D implements Serializable{
 		super();
 		
 		this.x = x;
+		
 		this.y = y;
+		
 		this.z = z;
 	}
 

@@ -8,7 +8,6 @@ public class SoccerPatternAlgorithm {
 	private SoccerEnvironment environment;
 	
 	
-	
 	public SoccerPatternAlgorithm() {
 		
 	}

@@ -156,8 +156,12 @@ public class SoccerDataUpdater extends DataUpdater{
 		environment.isUpdated();	
 	}
 
-
+	/**
+	 * Update environment timestamp to the latest timestamp entry in the data.
+	 * @param values
+	 */
 	private void updateTimestamp(String[] values) {
+		
 		long timestamp = Long.parseLong(values[dataMap.get("timestamp")]);
 		
 		environment.setTimestamp(timestamp);
@@ -166,8 +170,8 @@ public class SoccerDataUpdater extends DataUpdater{
 
 
 	/**
-	 * If sensor id is not already marked then update sensor data
-	 * @param values
+	 * If sensor id is not already marked then update sensor data.
+	 * @param values Array with data of one sensor.
 	 */
 	private void updateSingleSensor(String[] values) {
 		
@@ -221,10 +225,10 @@ public class SoccerDataUpdater extends DataUpdater{
 	
 	@Override
 	public void createColumnMapping(String[] content) {
+		
 		dataMap = new HashMap<String, Integer>();
 
 		dataMap = ConvertUtil.stringArrayToHashMap(	content[Constants.MAPPING_LINE].split(Constants.DELIMETER));
-		
 		
 	}
 
@@ -233,28 +237,31 @@ public class SoccerDataUpdater extends DataUpdater{
 	public void getSQLOrder(String[] content) {
 		
 		if(content[Constants.ORDER_LINE] == "DESC") {
+			
 			sql_order_desc = true;
+			
 		} else {
+			
 			sql_order_desc = false;
+			
 		}
 	}
 
 	
 	@Override
 	public void initEnvironment(String[] metaData) {
+		
 		environment.init(metaData);
 		
 		idSensorMap = environment.getIdSensorMap();
-		
-//		algorithm.setIdSensorMap(idSensorMap);
-		
+				
 		countSensors = idSensorMap.size();
-		
 	}
 
 
 	@Override
 	public void setEnvironment(Environment environment) {
+		
 		this.environment = (SoccerEnvironment) environment;
 		
 		start();

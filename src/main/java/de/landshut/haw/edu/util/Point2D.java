@@ -5,34 +5,36 @@ package de.landshut.haw.edu.util;
  */
 public class Point2D {
 	
+	
 	private double x;
 	
 	private double y;
   
 	
 	public Point2D(double x, double y) {
-		super();
+
 		this.x = x;
+		
 		this.y = y;
 	}
 
 	
-	public synchronized double getX() {
+	public double getX() {
 		return x;
 	}
 
 	
-	public synchronized void setX(double x) {
+	public void setX(double x) {
 		this.x = x;
 	}
 
 	
-	public synchronized double getY() {
+	public double getY() {
 		return y;
 	}
 
 	
-	public synchronized void setY(double y) {
+	public void setY(double y) {
 		this.y = y;
 	}
 }
